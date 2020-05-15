@@ -1,6 +1,7 @@
 import React from 'react';
 import useSignUpForm from '../hooks/CustomHooks';
-
+// https://medium.com/@geeky_writer_/using-react-hooks-to-create-awesome-forms-6f846a4ce57
+// https://blog.bitsrc.io/build-awesome-forms-in-react-using-redux-form-d1e4c96f5850
 
 const Signup = () => {
     const signup = () => {
