@@ -5,13 +5,15 @@ import { GlobalStyle } from './styles/GlobalStyle';
 import { Router } from '@reach/router';
 import Movie from './Movie';
 import NotFound from './NotFound';
+import SignupPage from './SignupPage';
 
 const App = () =>(
         <>
             <Header/>
             <Router>
                 <Home  path="/" />
-                <Movie  path="/:movieId" />
+                <SignupPage  path="/signup" />
+                <Movie  path="/:movieId" />                
                 <NotFound  default />
             </Router>
 

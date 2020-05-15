@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Grid from './elements/Grid';
-// import Header from './elements/Header';
 import HeroImage from './elements/HeroImage';
 import LoadMoreBtn from './elements/LoadMoreBtn';
 import MovieThumb from './elements/MovieThumb';
 import SearchBar from './elements/SearchBar';
 import Spinner from './elements/Spinner';
 import NoImage from './images/no_image.jpg';
+
 
 import { useHomeFetch } from './hooks/useHomeFetch';
 import {     
@@ -21,7 +21,7 @@ import {
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState('');
    const [{ state: {movies, heroImage, currentPage, totalPages},
-    loading, 
+    loading,    
     error 
 }, fetchMovies] = useHomeFetch(searchTerm);
    
@@ -41,7 +41,7 @@ const Home = () => {
 //    if(error) return <div> Something went wrong </div>
    if(!movies[0]) return <Spinner />;
     return (
-        <React.Fragment>
+        <React.Fragment>            
             { !searchTerm && (
                 <HeroImage 
                     image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${heroImage.backdrop_path}`}
